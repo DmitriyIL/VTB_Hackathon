@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/col_primary</item>
+        <item name="colorPrimaryDark">@color/col_primary_dark</item>
+        <item name="colorAccent">@color/col_green_1</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:fontFamily">@font/firasans_regular</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textColor">@color/col_text_black</item>
+    </style>
+
+    <style name="CheckDetailGrayMediumText">
+        <item name="android:fontFamily">@font/firasans_medium</item>
+        <item name="android:textColor">@color/col_black_50</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="CheckDetailGrayRegularText">
+        <item name="android:fontFamily">@font/firasans_regular</item>
+        <item name="android:textColor">@color/col_black_50</item>
+        <item name="android:textSize">@dimen/very_small_text_size</item>
+    </style>
+
+    <style name="GrayTextStyle" parent="TextStyle">
+        <item name="android:textColor">@color/col_text_gray</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/col_white</item>
+    </style>
+
+    <style name="LoadingBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTint">@color/col_green_1</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

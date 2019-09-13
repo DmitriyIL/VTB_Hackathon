@@ -1,0 +1,39 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Common dimens -->
+    <dimen name="space_extra_small">2dp</dimen>
+    <dimen name="space_small_1">4dp</dimen>
+    <dimen name="space_small_1_2">6dp</dimen>
+    <dimen name="space_small_2">8dp</dimen>
+    <dimen name="space_small_2_1">10dp</dimen>
+    <dimen name="space_small_3">12dp</dimen>
+    <dimen name="space_small_4">14dp</dimen>
+    <dimen name="space_normal_1">16dp</dimen>
+    <dimen name="space_normal_1_2">18dp</dimen>
+    <dimen name="space_normal_1_3">20dp</dimen>
+    <dimen name="space_normal_1_4">22dp</dimen>
+    <dimen name="space_normal_2">24dp</dimen>
+    <dimen name="space_normal_2_1">26dp</dimen>
+    <dimen name="space_normal_2_2">27dp</dimen>
+    <dimen name="space_normal_2_3">28dp</dimen>
+    <dimen name="space_big_1">32dp</dimen>
+    <dimen name="space_big_1_2">36dp</dimen>
+    <dimen name="space_big_2">40dp</dimen>
+    <dimen name="space_big_3">48dp</dimen>
+    <dimen name="space_large_1">56dp</dimen>
+    <dimen name="space_large_2">64dp</dimen>
+    <dimen name="space_large_3">72dp</dimen>
+    <dimen name="space_huge_1">80dp</dimen>
+    <dimen name="space_huge_2">88dp</dimen>
+    <dimen name="space_huge_3">96dp</dimen>
+    <dimen name="space_very_large_1">128dp</dimen>
+
+    <!--Text size-->
+    <dimen name="very_small_text_size">12sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="default_text_size">16sp</dimen>
+    <dimen name="big_text_size">18sp</dimen>
+    <dimen name="title_text_size">20sp</dimen>
+    <dimen name="large_text_size">24sp</dimen>
+</resources>
