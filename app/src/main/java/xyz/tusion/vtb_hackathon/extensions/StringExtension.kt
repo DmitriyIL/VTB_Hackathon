@@ -60,19 +60,3 @@ fun String.getBoldSumRegularCurrencySpannableStringBuilder(
     builder.append(spannableCurrencyCode)
     return builder
 }
-
-
-fun String.removeStartSigns(): String {
-    val rus1 = 'а'..'я'
-    val rus2 = 'А'..'Я'
-    val eng1 = 'a'..'z'
-    val eng2 = 'A'..'Z'
-    var startIndex = 0
-    while (!(this[startIndex] in rus1
-                || this[startIndex] in rus2
-                || this[startIndex] in eng1
-                || this[startIndex] in eng2)) {
-        startIndex++
-    }
-    return this.removeRange(0, startIndex)
-}
