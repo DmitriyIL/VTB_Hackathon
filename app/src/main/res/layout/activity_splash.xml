@@ -8,10 +8,26 @@
         tools:context=".SplashActivity"
         android:background="@android:color/white">
 
+    <ImageView
+            android:layout_marginBottom="124dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/zigzagView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginTop="164dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/logo"/>
+
+
     <ir.beigirad.zigzagview.ZigzagView
+            android:id="@+id/zigzagView"
             android:layout_width="0dp"
             android:layout_height="240dp"
             app:zigzagBackgroundColor="#8bc34a"
+            android:background="@drawable/back_splash"
             app:zigzagElevation="8dp"
             app:zigzagHeight="10dp"
             app:zigzagShadowAlpha="0.9"
@@ -19,7 +35,20 @@
             app:zigzagPaddingContent="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="4dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ЧЕК"
+                android:textSize="58sp"
+                android:textColor="#2E4988"
+                android:layout_marginEnd="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="44dp"
+                android:layout_marginTop="44dp"/>
+
 
     </ir.beigirad.zigzagview.ZigzagView>
 
