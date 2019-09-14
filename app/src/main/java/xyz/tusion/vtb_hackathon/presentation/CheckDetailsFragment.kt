@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -23,7 +24,7 @@ import xyz.tusion.vtb_hackathon.presentation.ScanQrFragment.Companion.SCAN_QR_CO
 import xyz.tusion.vtb_hackathon.repositories.CheckRepository
 
 class CheckDetailsFragment : Fragment() {
-    private lateinit var commodityListadapter: CommodityListAdapter
+    private lateinit var commodityListAdapter: CommodityListAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,19 +36,16 @@ class CheckDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        commodityListadapter = CommodityListAdapter()
-        frag_check_details_rv.adapter = commodityListadapter
+        commodityListAdapter = CommodityListAdapter()
+        frag_check_details_rv.adapter = commodityListAdapter
         comp_loading_root.toVisible()
-
-//        commodityListadapter.updateItems(listOf(Commodity(), Commodity(), Commodity(), Commodity()))
 
         val qrReceipt = parceQrReceipt(arguments?.getString(SCAN_QR_CONTENT_CODE)!!)
         CheckRepository.getCommodities(qrReceipt)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ commodityList ->
-                commodityListadapter.updateItems(commodityList)
-                frag_check_details_rv.setItemViewCacheSize(commodityList.size)
+                commodityListAdapter.updateItems(commodityList)
                 comp_loading_root.toGone()
             }, {
                 comp_loading_root.toGone()
@@ -98,14 +96,14 @@ class CommodityListAdapter(
             containerView.context.getString(R.string.commodity_items_count)
                 .format(item.quantity)
 
-            /*item_commodity_tv_total_price.text = item.sum!!
+            item_commodity_tv_total_price.text = (item.sum!!.toDouble() / 100)
                 .toBigDecimal()
                 .toCurrencyString()
                 .getBoldSumRegularCurrencySpannableStringBuilder(
                     containerView.context.getString(R.string.currency_rubles),
                     containerView.context,
                     sumColorResId = R.color.col_text_black
-                )*/
+                )
         }
     }
 }
