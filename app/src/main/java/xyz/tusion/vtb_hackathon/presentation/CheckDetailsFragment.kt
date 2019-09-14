@@ -93,7 +93,8 @@ class CommodityListAdapter(
         fun bind(item: Commodity) {
             item_commodity_tv_name.text = item.name
 
-            containerView.context.getString(R.string.commodity_items_count)
+            item_commodity_tv_items_count.text =
+                containerView.context.getString(R.string.commodity_items_count)
                 .format(item.quantity)
 
             item_commodity_tv_total_price.text = (item.sum!!.toDouble() / 100)

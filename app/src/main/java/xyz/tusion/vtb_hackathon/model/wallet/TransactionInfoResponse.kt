@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 class TransactionInfoResponse(
     var timestamp: String,
     var message: String,
-    var transactionInfoData: TransactionInfoData
+    var data: TransactionInfoData
 ): Parcelable
 
 @Parcelize
@@ -19,8 +19,8 @@ class TransactionInfoData(
     var recipient: String,
     var payer: String,
     var state: Int,
-    var created: Int,
-    var updated: Int,
+    var created: Long,
+    var updated: Long,
     var owner: String,
     var errorCode: Int
 ): Parcelable

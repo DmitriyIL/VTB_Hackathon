@@ -35,6 +35,6 @@ object WalletRepository {
         return WalletApiFactory
             .jsonService
             .getTransactionInfo(currencyCode, number, recipient, sessionId)
-            .map { it.transactionInfoData.state }
+            .map { it.data.state }
     }
 }

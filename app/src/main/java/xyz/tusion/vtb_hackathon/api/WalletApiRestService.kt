@@ -15,7 +15,7 @@ interface WalletApiRestService {
         @Header("FPSID") fpsid: String
     ): Single<CreateTransactionResponse>
 
-    @GET("/invoice/{currencyCode}/{number}/{recipient}")
+    @GET("invoice/{currencyCode}/{number}/{recipient}")
     fun getTransactionInfo(
         @Path("currencyCode") currencyCode: Int,
         @Path("number") number: String,
