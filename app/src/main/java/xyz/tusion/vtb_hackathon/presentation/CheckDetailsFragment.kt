@@ -53,8 +53,6 @@ class CheckDetailsFragment : Fragment() {
         frag_check_details_rv.adapter = null
         super.onDestroyView()
     }
-
-
 }
 
 class CommodityListAdapter(

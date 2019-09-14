@@ -12,6 +12,7 @@ android {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
     defaultConfig {
         applicationId "xyz.tusion.vtb_hackathon"
@@ -82,6 +83,9 @@ dependencies {
 
     // threetenabp
     implementation "com.jakewharton.threetenabp:threetenabp:$rootProject.ext.threeTenAbpVersion"
+
+    implementation 'com.github.beigirad:ZigzagView:1.0.7'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
