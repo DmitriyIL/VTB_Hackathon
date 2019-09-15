@@ -26,12 +26,9 @@
             android:id="@+id/zigzagView"
             android:layout_width="0dp"
             android:layout_height="240dp"
-            app:zigzagBackgroundColor="#8bc34a"
-            android:background="@drawable/back_splash"
-            app:zigzagElevation="8dp"
-            app:zigzagHeight="10dp"
-            app:zigzagShadowAlpha="0.9"
-            app:zigzagSides="top|bottom"
+            app:zigzagBackgroundColor="@color/blue_dark"
+            app:zigzagHeight="8dp"
+            app:zigzagSides="top"
             app:zigzagPaddingContent="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,12 +39,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ЧЕК"
-                android:textSize="58sp"
-                android:textColor="#2E4988"
+                android:textSize="68sp"
+                android:textColor="#6E89CA"
                 android:layout_marginEnd="80dp"
                 android:layout_marginStart="80dp"
                 android:layout_marginBottom="44dp"
-                android:layout_marginTop="44dp"/>
+                android:layout_marginTop="44dp"
+        android:textStyle="bold"/>
 
 
     </ir.beigirad.zigzagview.ZigzagView>

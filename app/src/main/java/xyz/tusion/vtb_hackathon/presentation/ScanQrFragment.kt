@@ -34,7 +34,7 @@ class ScanQrFragment : Fragment() {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
             findNavController().navigate(
-                R.id.action_scanQrFragment_to_checkDetailsFragment,
+                R.id.checkDetailsFragment,
                 Bundle().apply {
                     putString(SCAN_QR_CONTENT_CODE, result.contents)
                 }

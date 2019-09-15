@@ -6,21 +6,6 @@
     app:startDestination="@id/profileFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="xyz.tusion.vtb_hackathon.presentation.MainFragment"
-        android:label="MainFragment"
-        tools:layout="@layout/frag_main"/>
-
-    <fragment
-        android:id="@+id/scanQrFragment"
-        android:name="xyz.tusion.vtb_hackathon.presentation.ScanQrFragment"
-        android:label="ScanQrFragment">
-        <action
-            android:id="@+id/action_scanQrFragment_to_checkDetailsFragment"
-            app:destination="@id/checkDetailsFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/checkDetailsFragment"
         android:name="xyz.tusion.vtb_hackathon.presentation.CheckDetailsFragment"
         android:label="frag_check_details"
@@ -37,7 +22,6 @@
         <action android:id="@+id/action_profileFragment_to_noScanChoiseDialog2"
                 app:destination="@id/noScanChoiseDialog"/>
         <action android:id="@+id/action_profileFragment_to_scanChoiseDialog" app:destination="@id/scanChoiseDialog"/>
-        <action android:id="@+id/action_profileFragment_to_scanQrFragment2" app:destination="@id/scanQrFragment2"/>
     </fragment>
     <fragment android:id="@+id/noScanChoiseDialog" android:name="xyz.tusion.vtb_hackathon.NoScanChoiseDialog"
               android:label="content_no_scan" tools:layout="@layout/content_no_scan">
@@ -51,8 +35,11 @@
               android:label="AddUserDialog"/>
     <fragment android:id="@+id/scanChoiseDialog" android:name="xyz.tusion.vtb_hackathon.ScanChoiseDialog"
               android:label="content_scan" tools:layout="@layout/content_scan">
-        <action android:id="@+id/action_scanChoiseDialog_to_scanQrFragment" app:destination="@id/scanQrFragment"/>
+        <action android:id="@+id/action_scanChoiseDialog_to_scanQrFragment2" app:destination="@id/scanQrFragment2"/>
     </fragment>
     <fragment android:id="@+id/scanQrFragment2" android:name="xyz.tusion.vtb_hackathon.presentation.ScanQrFragment"
-              android:label="ScanQrFragment"/>
+              android:label="ScanQrFragment">
+        <action android:id="@+id/action_scanQrFragment2_to_checkDetailsFragment"
+                app:destination="@id/checkDetailsFragment"/>
+    </fragment>
 </navigation>

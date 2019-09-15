@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 public class ScanChoiseDialog extends Fragment {
 
@@ -32,6 +34,14 @@ public class ScanChoiseDialog extends Fragment {
             @Override
             public void afterTextChanged(Editable editable) {
                 setSumma(editable.toString());
+            }
+        });
+        view.findViewById(R.id.btn_create).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.
+                        findNavController(getActivity(), R.id.act_main_nav_host_fragment);
+                navController.navigate(R.id.scanQrFragment2);
             }
         });
 
