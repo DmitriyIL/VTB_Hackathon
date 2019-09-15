@@ -14,7 +14,7 @@
     <color name="col_black">#333333</color>
     <color name="col_black_50">#80333333</color>
     <color name="col_black_25">#40333333</color>
-    <color name="blue_dark"></color>
+    <color name="blue_dark">#0D2C75</color>
 
     <!-- Text -->
     <color name="col_text_black">@color/col_black</color>
