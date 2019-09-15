@@ -70,7 +70,6 @@ public class NoScanFragment extends Fragment {
             public ItemViewHolder(View view) {
                 super(view);
                 text = (TextView) view.findViewById(R.id.text_user);
-                fab = (FloatingActionButton) view.findViewById(R.id.check_pay);
             }
         }
     }
