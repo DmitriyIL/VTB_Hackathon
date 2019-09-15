@@ -77,8 +77,7 @@ class MainFragment : Fragment() {
 //                    this::onSuccess,
 //                    this::onError
 //                )
-            findNavController().navigate(R.id.action_mainFragment_to_scanQrFragment)
-//            findNavController().navigateUp()
+//            findNavController().navigate(R.id.action_mainFragment_to_scanQrFragment)
         }
         content_main_btn_get_state.setOnClickListener{
             showTheDialog()

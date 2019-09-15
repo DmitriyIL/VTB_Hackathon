@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.frag_check_details.*
+import kotlinx.android.synthetic.main.frag_profile.*
 import kotlinx.android.synthetic.main.item_room.*
 import xyz.tusion.vtb_hackathon.R
 import xyz.tusion.vtb_hackathon.model.back.CheckDivisionRoom
@@ -26,11 +27,21 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         roomListAdapter = RoomListAdapter()
-        frag_check_details_rv.adapter = roomListAdapter
+        frag_profile_rv.adapter = roomListAdapter
 
         val list = MutableList(20) { CheckDivisionRoom("Ресторан палуба", "Вы", 7493256) }
         roomListAdapter.updateItems(list)
+
+        initListeners()
     }
+
+    private fun initListeners() {
+        frag_profile_fab_new_room.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_scanQrFragment)
+        }
+    }
+
+
 }
 
 class RoomListAdapter(
