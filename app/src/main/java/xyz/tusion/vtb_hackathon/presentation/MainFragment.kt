@@ -9,12 +9,17 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.content_main.*
 import xyz.tusion.vtb_hackathon.R
 import xyz.tusion.vtb_hackathon.model.back.RoomToSend
+import xyz.tusion.vtb_hackathon.model.wallet.CreateTransactionRequest
 import xyz.tusion.vtb_hackathon.presentation.standard.LoadingDialog
 import xyz.tusion.vtb_hackathon.presentation.standard.LoadingView
 import xyz.tusion.vtb_hackathon.repositories.JsonRepository
+import xyz.tusion.vtb_hackathon.repositories.WalletRepository
+import java.util.concurrent.TimeUnit
 
 
 class MainFragment : Fragment() {
@@ -30,7 +35,7 @@ class MainFragment : Fragment() {
         var dialog: LoadingView
         dialog = LoadingDialog.view(fragmentManager)
         content_main_btn_qr_scan.setOnClickListener {
-            /*WalletRepository.getSessionId()
+            WalletRepository.getSessionId()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
@@ -61,17 +66,17 @@ class MainFragment : Fragment() {
                                     content_main_tv_qr.text = "${content_main_tv_qr.text}\n Status: $it"
                                 }, {})
                         }, {})
-                }, {})*/
-            JsonRepository
-                .sendRoom(RoomToSend(1150, 3, "NewDefaultRoom"))
-                .doOnSubscribe {dialog.showLoadingIndicator()}
-                .doAfterTerminate {dialog.hideLoadingIndicator()}
-                .subscribe (
-                    this::onSuccess,
-                    this::onError
-                )
-//            findNavController().navigate(R.id.action_mainFragment_to_scanQrFragment)
-//            findNavController().navigate(R.id.action_mainFragment_to_scanQrFragment)
+                }, {})
+//            JsonRepository
+//                .sendRoom(RoomToSend(1150, 3, "NewDefaultRoom"))
+//                .doOnSubscribe {dialog.showLoadingIndicator()}
+//                .doAfterTerminate {dialog.hideLoadingIndicator()}
+//                .subscribe (
+//                    this::onSuccess,
+//                    this::onError
+//                )
+            findNavController().navigate(R.id.action_mainFragment_to_scanQrFragment)
+//            findNavController().navigateUp()
         }
     }
 

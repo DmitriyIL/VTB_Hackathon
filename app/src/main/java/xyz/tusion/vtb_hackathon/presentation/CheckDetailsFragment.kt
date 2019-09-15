@@ -13,6 +13,9 @@ import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.comp_loading.*
 import kotlinx.android.synthetic.main.frag_check_details.*
 import kotlinx.android.synthetic.main.item_commodity.*
+import kotlinx.android.synthetic.main.item_commodity.item_commodity_tv_name
+import kotlinx.android.synthetic.main.item_commodity.item_commodity_tv_total_price
+import kotlinx.android.synthetic.main.one_good.*
 import xyz.tusion.vtb_hackathon.R
 import xyz.tusion.vtb_hackathon.extensions.*
 import xyz.tusion.vtb_hackathon.model.fts.Commodity
@@ -88,7 +91,7 @@ class CommodityListAdapter(
         fun bind(item: Commodity) {
             item_commodity_tv_name.text = item.name?.removeStartSigns()
 
-            item_commodity_tv_items_count.text =
+            one_good_total_count.text =
                 containerView.context.getString(R.string.commodity_items_count)
                 .format(item.quantity)
 
