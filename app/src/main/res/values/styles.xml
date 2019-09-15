@@ -6,8 +6,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/col_primary</item>
         <item name="colorPrimaryDark">@color/col_primary_dark</item>
-        <item name="colorAccent">@color/col_green_1</item>
-        <item name="android:background">#000</item>
+        <item name="colorAccent">#FF1F00</item>
     </style>
 
 

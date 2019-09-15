@@ -5,6 +5,9 @@
     <string name="commodity_items_count">x %1$.3f</string>
     <string name="commodity_vendor_code"># %1$s</string>
     <string name="currency_rubles">RUB</string>
+
+    <string name="room_item_owner">Владелец: %s</string>
+    <string name="room_item_id">id: %s</string>
     <string name="loading">Loading...</string>
 
 </resources>
