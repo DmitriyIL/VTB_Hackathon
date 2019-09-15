@@ -117,6 +117,7 @@ tools:context=".NoScanChoiseDialog">
         app:layout_constraintHorizontal_bias="0.498"
         android:text="Создать"
         android:textAllCaps="false"
+        android:background="@drawable/btn_shape"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

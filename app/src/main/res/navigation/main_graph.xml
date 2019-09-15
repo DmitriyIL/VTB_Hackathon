@@ -34,8 +34,25 @@
         android:name="xyz.tusion.vtb_hackathon.presentation.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/frag_profile" >
-        <action
-            android:id="@+id/action_profileFragment_to_scanQrFragment"
-            app:destination="@id/scanQrFragment" />
+        <action android:id="@+id/action_profileFragment_to_noScanChoiseDialog2"
+                app:destination="@id/noScanChoiseDialog"/>
+        <action android:id="@+id/action_profileFragment_to_scanChoiseDialog" app:destination="@id/scanChoiseDialog"/>
+        <action android:id="@+id/action_profileFragment_to_scanQrFragment2" app:destination="@id/scanQrFragment2"/>
     </fragment>
+    <fragment android:id="@+id/noScanChoiseDialog" android:name="xyz.tusion.vtb_hackathon.NoScanChoiseDialog"
+              android:label="content_no_scan" tools:layout="@layout/content_no_scan">
+        <action android:id="@+id/action_noScanChoiseDialog_to_noScanFragment" app:destination="@id/noScanFragment"/>
+    </fragment>
+    <fragment android:id="@+id/noScanFragment" android:name="xyz.tusion.vtb_hackathon.NoScanFragment"
+              android:label="fragment_no_scan" tools:layout="@layout/fragment_no_scan">
+        <action android:id="@+id/action_noScanFragment_to_addUserDialog" app:destination="@id/addUserDialog"/>
+    </fragment>
+    <fragment android:id="@+id/addUserDialog" android:name="xyz.tusion.vtb_hackathon.AddUserDialog"
+              android:label="AddUserDialog"/>
+    <fragment android:id="@+id/scanChoiseDialog" android:name="xyz.tusion.vtb_hackathon.ScanChoiseDialog"
+              android:label="content_scan" tools:layout="@layout/content_scan">
+        <action android:id="@+id/action_scanChoiseDialog_to_scanQrFragment" app:destination="@id/scanQrFragment"/>
+    </fragment>
+    <fragment android:id="@+id/scanQrFragment2" android:name="xyz.tusion.vtb_hackathon.presentation.ScanQrFragment"
+              android:label="ScanQrFragment"/>
 </navigation>

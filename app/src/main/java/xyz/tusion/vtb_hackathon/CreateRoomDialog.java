@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.Toast;
 import androidx.fragment.app.*;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -85,4 +86,5 @@ public class CreateRoomDialog extends DialogFragment {
     public void setNumberUsers(int numberUsers) {
         this.numberUsers = numberUsers;
     }
+
 }

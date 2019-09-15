@@ -8,6 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import xyz.tusion.vtb_hackathon.presentation.MainActivity;
+import xyz.tusion.vtb_hackathon.presentation.MainFragment;
+import xyz.tusion.vtb_hackathon.presentation.ProfileFragment;
 
 public class NoScanChoiseDialog extends Fragment {
 
@@ -49,6 +54,14 @@ public class NoScanChoiseDialog extends Fragment {
             @Override
             public void afterTextChanged(Editable editable) {
                 setNumberUsers(Integer.valueOf(editable.toString()));
+            }
+        });
+        view.findViewById(R.id.btn_create).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.
+                        findNavController(getActivity(), R.id.act_main_nav_host_fragment);
+                navController.navigate(R.id.noScanFragment);
             }
         });
 

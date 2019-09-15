@@ -6,7 +6,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/back_dialog_create">
+        android:background="@color/blue_dark">
 
     <TextView
             android:id="@+id/summa_scan"
@@ -46,6 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/divider"
             app:layout_constraintHorizontal_bias="0.5"
             android:text="Создать"
+            android:background="@drawable/btn_shape"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"/>
 

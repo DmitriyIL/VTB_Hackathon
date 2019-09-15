@@ -69,7 +69,9 @@
         android:layout_marginEnd="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_qr" />
+        app:srcCompat="@drawable/ic_qr"
+    android:clickable="true"
+    android:focusable="true"/>
 
     <TextView
         android:id="@+id/frag_check_details_tv_number"

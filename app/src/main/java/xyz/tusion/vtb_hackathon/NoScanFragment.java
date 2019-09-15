@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,6 +34,14 @@ public class NoScanFragment extends Fragment {
         RecyclerView list_users = view.findViewById(R.id.list_users);
         list_users.setAdapter(new UserAdapter(getContext(), list));
         list_users.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+        view.findViewById(R.id.frag_check_details_qr).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.
+                        findNavController(getActivity(), R.id.act_main_nav_host_fragment);
+                navController.navigate(R.id.addUserDialog);
+            }
+        });
         return view;
     }
 

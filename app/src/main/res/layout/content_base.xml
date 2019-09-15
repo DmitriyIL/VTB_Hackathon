@@ -37,7 +37,7 @@ tools:context=".BaseFragment">
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/mess_scan"
         app:layout_constraintHorizontal_bias="0.801"
-        android:text="Нет"
+        android:text="Да"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
 
@@ -53,7 +53,7 @@ tools:context=".BaseFragment">
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/mess_scan"
         app:layout_constraintHorizontal_bias="0.5"
-        android:text="Да"
+        android:text="Нет"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"/>
 

@@ -4,13 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.frag_profile.*
 import kotlinx.android.synthetic.main.item_room.*
+import xyz.tusion.vtb_hackathon.CreateRoomDialog
 import xyz.tusion.vtb_hackathon.R
+import xyz.tusion.vtb_hackathon.SearchDialog
 import xyz.tusion.vtb_hackathon.model.back.CheckDivisionRoom
 
 class ProfileFragment : Fragment() {
@@ -37,8 +40,17 @@ class ProfileFragment : Fragment() {
 
     private fun initListeners() {
         frag_profile_fab_new_room.setOnClickListener {
-            findNavController().navigate(R.id.action_profileFragment_to_scanQrFragment)
+            showTheDialog(CreateRoomDialog())
         }
+        frag_check_details_qr.setOnClickListener {
+            showTheDialog(SearchDialog())
+        }
+    }
+
+    protected fun showTheDialog(f : DialogFragment) {
+        val ft = fragmentManager!!.beginTransaction()
+        ft.add(f, "fragment_dialog")
+        ft.commit()
     }
 
 
