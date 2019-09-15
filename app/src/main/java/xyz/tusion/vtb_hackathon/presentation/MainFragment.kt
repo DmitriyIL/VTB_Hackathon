@@ -22,6 +22,7 @@ import xyz.tusion.vtb_hackathon.repositories.JsonRepository
 import xyz.tusion.vtb_hackathon.repositories.WalletRepository
 import java.util.concurrent.TimeUnit
 import xyz.tusion.vtb_hackathon.CreateRoomDialog
+import xyz.tusion.vtb_hackathon.api.BackApiFactory
 
 
 class MainFragment : Fragment() {
@@ -80,7 +81,15 @@ class MainFragment : Fragment() {
 //            findNavController().navigate(R.id.action_mainFragment_to_scanQrFragment)
         }
         content_main_btn_get_state.setOnClickListener{
-            showTheDialog()
+            BackApiFactory.jsonService
+                .getWalletByPhone("89604786259")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    content_main_tv_qr.text = it
+                }, {
+                    Log.d("CHECK", it.message)
+                })
         }
     }
 

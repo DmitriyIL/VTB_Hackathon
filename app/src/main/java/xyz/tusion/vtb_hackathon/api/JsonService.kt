@@ -3,12 +3,9 @@ package xyz.tusion.vtb_hackathon.api
 import com.google.gson.JsonObject
 import io.reactivex.Completable
 import io.reactivex.Observable
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import io.reactivex.Single
+import retrofit2.http.*
 import xyz.tusion.vtb_hackathon.model.back.RoomToGet
-import xyz.tusion.vtb_hackathon.model.back.RoomToSend
 
 interface JsonService {
     @POST("createroom")
@@ -24,4 +21,10 @@ interface JsonService {
 
     @GET("createroom")
     fun getRoomData(): Observable<RoomToGet>
+
+    @GET("room/gethash")
+    fun getWalletByPhone(
+        @Query("phone") phone: String,
+        @Header("Content-Type") ct: String = "UTF-8"
+    ): Single<String>
 }

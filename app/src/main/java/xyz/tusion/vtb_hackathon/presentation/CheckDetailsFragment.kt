@@ -74,6 +74,10 @@ class CheckDetailsFragment : Fragment() {
                 frag_check_details_total_sum.text =
                     context?.getString(R.string.check_details_sum)?.format(totalSum)
             }
+
+        frag_check_details_qr.setOnClickListener {
+
+        }
     }
 
     override fun onDestroyView() {
