@@ -20,4 +20,6 @@
     <color name="col_text_black">@color/col_black</color>
     <color name="col_text_inactive">@color/col_black_25</color>
     <color name="col_text_gray">@color/col_black_50</color>
+    <color name="col_item_balance_of">#96FF0000</color>
+    <color name="col_item_balance_on">#9600C708</color>
 </resources>
