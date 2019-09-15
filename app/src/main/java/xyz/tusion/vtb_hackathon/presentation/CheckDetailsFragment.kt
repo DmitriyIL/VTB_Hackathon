@@ -19,7 +19,10 @@ import kotlinx.android.synthetic.main.item_commodity.item_commodity_tv_name
 import kotlinx.android.synthetic.main.item_commodity.item_commodity_tv_total_price
 import kotlinx.android.synthetic.main.one_good.*
 import xyz.tusion.vtb_hackathon.R
-import xyz.tusion.vtb_hackathon.extensions.*
+import xyz.tusion.vtb_hackathon.extensions.getBoldSumRegularCurrencySpannableStringBuilder
+import xyz.tusion.vtb_hackathon.extensions.toCurrencyString
+import xyz.tusion.vtb_hackathon.extensions.toGone
+import xyz.tusion.vtb_hackathon.extensions.toVisible
 import xyz.tusion.vtb_hackathon.model.fts.Commodity
 import xyz.tusion.vtb_hackathon.model.parceQrReceipt
 import xyz.tusion.vtb_hackathon.presentation.ScanQrFragment.Companion.SCAN_QR_CONTENT_CODE
@@ -111,7 +114,7 @@ class CommodityListAdapter(
     inner class CommodityViewHolder(override val containerView: View) :
         RecyclerView.ViewHolder(containerView), LayoutContainer {
         fun bind(item: Commodity) {
-            item_commodity_tv_name.text = item.name?.removeStartSigns()
+            item_commodity_tv_name.text = item.name
 
             one_good_total_count.text =
                 containerView.context.getString(R.string.commodity_items_count)

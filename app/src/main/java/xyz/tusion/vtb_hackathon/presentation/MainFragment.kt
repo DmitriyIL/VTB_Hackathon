@@ -1,6 +1,7 @@
 package xyz.tusion.vtb_hackathon.presentation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ import xyz.tusion.vtb_hackathon.presentation.standard.LoadingView
 import xyz.tusion.vtb_hackathon.repositories.JsonRepository
 import xyz.tusion.vtb_hackathon.repositories.WalletRepository
 import java.util.concurrent.TimeUnit
+import xyz.tusion.vtb_hackathon.CreateRoomDialog
 
 
 class MainFragment : Fragment() {
@@ -77,6 +79,16 @@ class MainFragment : Fragment() {
 //                )
 //            findNavController().navigate(R.id.action_mainFragment_to_scanQrFragment)
         }
+        content_main_btn_get_state.setOnClickListener{
+            showTheDialog()
+        }
+    }
+
+    protected fun showTheDialog() {
+        val f = CreateRoomDialog()
+        val ft = fragmentManager!!.beginTransaction()
+        ft.add(f, "fragment_dialog")
+        ft.commit()
     }
 
     private fun onError(t: Throwable) {
