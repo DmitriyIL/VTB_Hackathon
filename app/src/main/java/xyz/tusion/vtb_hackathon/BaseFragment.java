@@ -26,13 +26,13 @@ public class BaseFragment extends Fragment {
         rootView.findViewById(R.id.btn_yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((CreateRoomDialog)getParentFragment()).showFragment(new ScanFragment());
+                ((CreateRoomDialog)getParentFragment()).showFragment(new ScanChoiseDialog());
             }
         });
         rootView.findViewById(R.id.btn_no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((CreateRoomDialog)getParentFragment()).showFragment(new NoScanFragment());
+                ((CreateRoomDialog)getParentFragment()).showFragment(new NoScanChoiseDialog());
             }
         });
         return rootView;

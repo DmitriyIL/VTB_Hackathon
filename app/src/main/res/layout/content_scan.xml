@@ -7,9 +7,9 @@ android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:background="@android:color/transparent"
-tools:context=".ScanFragment">
+tools:context=".ScanChoiseDialog">
 
-<TextView
+<EditText
         android:id="@+id/summa_scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
