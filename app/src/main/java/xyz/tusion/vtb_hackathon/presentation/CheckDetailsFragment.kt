@@ -14,10 +14,7 @@ import kotlinx.android.synthetic.main.comp_loading.*
 import kotlinx.android.synthetic.main.frag_check_details.*
 import kotlinx.android.synthetic.main.item_commodity.*
 import xyz.tusion.vtb_hackathon.R
-import xyz.tusion.vtb_hackathon.extensions.getBoldSumRegularCurrencySpannableStringBuilder
-import xyz.tusion.vtb_hackathon.extensions.toCurrencyString
-import xyz.tusion.vtb_hackathon.extensions.toGone
-import xyz.tusion.vtb_hackathon.extensions.toVisible
+import xyz.tusion.vtb_hackathon.extensions.*
 import xyz.tusion.vtb_hackathon.model.fts.Commodity
 import xyz.tusion.vtb_hackathon.model.parceQrReceipt
 import xyz.tusion.vtb_hackathon.presentation.ScanQrFragment.Companion.SCAN_QR_CONTENT_CODE
@@ -56,8 +53,6 @@ class CheckDetailsFragment : Fragment() {
         frag_check_details_rv.adapter = null
         super.onDestroyView()
     }
-
-
 }
 
 class CommodityListAdapter(
@@ -91,7 +86,7 @@ class CommodityListAdapter(
     inner class CommodityViewHolder(override val containerView: View) :
         RecyclerView.ViewHolder(containerView), LayoutContainer {
         fun bind(item: Commodity) {
-            item_commodity_tv_name.text = item.name
+            item_commodity_tv_name.text = item.name?.removeStartSigns()
 
             item_commodity_tv_items_count.text =
                 containerView.context.getString(R.string.commodity_items_count)
