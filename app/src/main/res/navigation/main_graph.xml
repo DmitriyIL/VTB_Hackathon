@@ -46,4 +46,12 @@
         android:name="xyz.tusion.vtb_hackathon.presentation.MyQrFragment"
         android:label="frag_my_qrf"
         tools:layout="@layout/frag_my_qrf" />
+    <dialog
+        android:id="@+id/searchDialog"
+        android:name="xyz.tusion.vtb_hackathon.SearchDialog"
+        android:label="SearchDialog" >
+        <action
+            android:id="@+id/action_searchDialog_to_scanQrFragment"
+            app:destination="@id/scanQrFragment" />
+    </dialog>
 </navigation>
