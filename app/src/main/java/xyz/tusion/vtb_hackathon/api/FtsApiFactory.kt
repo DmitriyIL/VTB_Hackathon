@@ -50,6 +50,7 @@ object FtsApiFactory {
 
     private fun buildRetrofit(): Retrofit {
         return Retrofit.Builder()
+            .baseUrl("https://proverkacheka.nalog.ru:9999/v1/")
             .client(client!!)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

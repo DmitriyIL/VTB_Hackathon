@@ -11,7 +11,7 @@ import xyz.tusion.vtb_hackathon.model.fts.ReceiptDetailsResponse
 interface FtsApiRestService {
 
     //Также обязательно указать хотя бы пустые заголовки device-id и device-os
-    @GET("https://proverkacheka.nalog.ru:9999/v1/inns/*/kkts/*/fss/{fn}/tickets/{i}")
+    @GET("inns/*/kkts/*/fss/{fn}/tickets/{i}")
     fun getReceiptDetails(
         @Path("fn") fiscalStorageNumber: String,
         @Path("i") fiscalReceiptNumber: Long,
@@ -22,7 +22,7 @@ interface FtsApiRestService {
         @Header("Authorization") auth: String
     ): Single<ReceiptDetailsResponse>
 
-    @GET("https://proverkacheka.nalog.ru:9999/v1/ofds/*/inns/*/fss/{fn}/operations/{n}/tickets/{i}")
+    @GET("ofds/*/inns/*/fss/{fn}/operations/{n}/tickets/{i}")
     fun checkReceipt(
         @Path("fn") fiscalStorageNumber: String,
         @Path("n") paymentIndication: Int,

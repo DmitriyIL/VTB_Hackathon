@@ -20,7 +20,7 @@ class ScanQrFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.frag_main, container, false)
+        return inflater.inflate(R.layout.act_base, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

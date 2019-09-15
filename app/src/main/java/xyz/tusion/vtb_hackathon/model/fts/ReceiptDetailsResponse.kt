@@ -42,7 +42,8 @@ class Commodity(
     var sum: Int? = null,
     var quantity: Double? = null,
     var price: Int? = null,
-    var name: String? = null
+    var name: String? = null,
+    var occupiedQuantity: Int = 0
 ) : Parcelable
 
 
