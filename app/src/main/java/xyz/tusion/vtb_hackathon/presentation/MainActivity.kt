@@ -7,6 +7,8 @@ import xyz.tusion.vtb_hackathon.R
 class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.act_main)
+    setContentView(R.layout.activity_main)
+
+
   }
 }
