@@ -37,5 +37,13 @@
         <action
             android:id="@+id/action_profileFragment_to_scanQrFragment"
             app:destination="@id/scanQrFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myQrFragment"
+            app:destination="@id/myQrFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/myQrFragment"
+        android:name="xyz.tusion.vtb_hackathon.presentation.MyQrFragment"
+        android:label="frag_my_qrf"
+        tools:layout="@layout/frag_my_qrf" />
 </navigation>

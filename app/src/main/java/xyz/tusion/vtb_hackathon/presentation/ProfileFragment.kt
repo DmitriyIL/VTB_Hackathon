@@ -39,6 +39,11 @@ class ProfileFragment : Fragment() {
         frag_profile_fab_new_room.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_scanQrFragment)
         }
+
+        frag_check_details_qr.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_myQrFragment)
+        }
+
     }
 
 

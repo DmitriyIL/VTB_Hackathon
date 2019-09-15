@@ -11,4 +11,7 @@ object SharedPreferencesUtils {
     fun saveWallet(wallet: String) {
         sp.edit().putString(WALLET, wallet)
     }
+
+    fun getWallet() = sp.getString(WALLET, "")
+
 }
