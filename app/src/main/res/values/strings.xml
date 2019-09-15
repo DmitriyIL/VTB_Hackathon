@@ -6,7 +6,7 @@
     <string name="commodity_vendor_code"># %1$s</string>
     <string name="currency_rubles">RUB</string>
 
-    <string name="check_details_sum">Итого: %.2f руб</string>
+    <string name="check_details_sum">Итого: 0.00 руб</string>
 
     <string name="room_item_owner">Владелец: %s</string>
     <string name="room_item_id">id: %s</string>
